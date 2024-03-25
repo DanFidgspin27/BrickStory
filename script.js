@@ -164,10 +164,34 @@ function setup(){
     a5.innerHTML = 'About Us'
     document.getElementById("l5").appendChild(a5);
 
+    const l6 = document.createElement("li");
+    l6.setAttribute("id","l6");
+    l6.setAttribute("class","icon")
+    document.getElementById("topnav").appendChild(l6);
+    const a6 = document.createElement("a");
+    a6.setAttribute("href","javascript:void()");
+    a6.setAttribute('id','icon')
+    a6.setAttribute('onclick','resNav()')
+    document.getElementById("l6").appendChild(a6);
+    const i = document.createElement('i')
+    i.setAttribute("class","fa fa-bars")
+    document.getElementById("icon").appendChild(i)
+
+
+
+
     
 }
 
-
+function resNav() {
+    console.log('cheese')
+    var x = document.getElementById("topnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
 
 
